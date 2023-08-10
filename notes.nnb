@@ -1,0 +1,60 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# To Do\n\n[] Update ReadMe\n\n[] CRUD\n    [] Get\n    [] Post?\n    [] Put (like button)\n    [] Delete?"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Requirements\n\nRender images to the DOM.\n\nWhen an image is clicked, a description will pop up.\n\nEach image should have a like button."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Outlining"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Routes\n\nserver: `'/gallery'`\nlike button put: `'/gallery/like/:id'`\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## Gallery items\nEach image will probably look something like this:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<div class=\"image-container\">\n    <img width=\"100\" height=\"100\" onClick=\"showDescription\">\n    <button onClick=\"likeImage\">Like</button>\n    <p>x people liked this</p>\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Conditional rendering will be needed to show the image description."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Ideas for images\nI'm thinking it would be nice to make a little gallery for Patty. She is sacrificing too, and I think she would appreciate a little gesture. (Then again, the fact that instructors and stuff would see it might bug her. Might make an alt version for her.)\n\n- Costa Rica plane picture\n- Slamburger Patty logo\n- A picture from her Tinder\n- That hiking picture from her phone"
+            ],
+            "outputs": []
+        }
+    ]
+}
