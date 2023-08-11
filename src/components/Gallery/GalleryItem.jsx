@@ -1,10 +1,14 @@
 import axios from 'axios'
+import { useState } from 'react'
 
 function GalleryItem(pic) {
 
+    // NOTE TO SELF: REVIEW WHY THIS WORKS
+        // IT DONT MAKE NO SENSE TO ME
+            // THE CONCEPTS ARE SO LARGE AND I AM SO SMALL
+    const [descMode, setDescMode] = useState(false)
     function showDescription() {
-        console.log(pic.description)
-        // Each gallery item will likely have a property containing this description
+        setDescMode(!descMode)
     }
     
     function likeImage() {
@@ -18,9 +22,13 @@ function GalleryItem(pic) {
         })
     }
 
+   
     return (<>
         <div className="image-container">
-            <img width="400" height="200" onClick={showDescription} src={pic.path}/>
+            {descMode
+                ? <p onClick={showDescription}>{pic.description}</p>
+                : <img width="400" height="200" onClick={showDescription} src={pic.path}/>
+            }
             <button onClick={likeImage}>Like</button>
             <p>{pic.likes} people liked this</p>
         </div>

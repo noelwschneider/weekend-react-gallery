@@ -27,7 +27,7 @@ function GalleryList() {
 
     return (<>
         {gallery.map( pic => (
-            <GalleryItem key={pic.id} id={pic.id} path={pic.path} description={pic.description} likes={pic.likes} getGallery={getGallery}/>
+            <GalleryItem key={pic.id} id={pic.id} path={pic.path} description={pic.description} likes={pic.likes} getGallery={getGallery} descMode={pic.descMode}/>
         ))}
     </>)
 }
