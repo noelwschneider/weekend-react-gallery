@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { useState } from 'react'
 
+// Styling
+import { Button, Typography } from '@mui/material'
+
 function GalleryItem(pic) {
 
     // NOTE TO SELF: REVIEW WHY THIS WORKS
@@ -22,14 +25,13 @@ function GalleryItem(pic) {
         })
     }
 
-   
     return (<>
         <div className="image-container">
             {descMode
                 ? <p onClick={showDescription}>{pic.description}</p>
                 : <img width="400" height="200" onClick={showDescription} src={pic.path}/>
             }
-            <button onClick={likeImage}>Like</button>
+            <Button variant="contained" onClick={likeImage}>Like</Button>
             <p>{pic.likes} people liked this</p>
         </div>
     </>)

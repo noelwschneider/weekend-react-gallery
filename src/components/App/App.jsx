@@ -8,7 +8,6 @@ import './App.css';
 import Header from '../Header/Header';
 import GalleryList from '../Gallery/GalleryList';
 
-
 function App() {
     return (
       <div className="App">
