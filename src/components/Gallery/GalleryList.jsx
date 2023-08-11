@@ -7,7 +7,7 @@ function GalleryList() {
 
     const [gallery, setGallery] = useState([])
 
-    useEffect( () => {
+    const getGallery = () => {
         axios.get('/gallery')
         .then( response => {
             setGallery(response.data)
@@ -15,16 +15,19 @@ function GalleryList() {
         .catch( error => {
             console.log('error in GET', error)
         })
+    }
+
+    useEffect( () => {
+        getGallery()
     }, [])
 
-    console.log(gallery)
     gallery.map( pic => {
         console.log(pic.description)
     })
 
     return (<>
         {gallery.map( pic => (
-            <GalleryItem key={pic.id} id={pic.id} path={pic.path} description={pic.description} likes={pic.likes} setGallery={setGallery}/>
+            <GalleryItem key={pic.id} id={pic.id} path={pic.path} description={pic.description} likes={pic.likes} getGallery={getGallery}/>
         ))}
     </>)
 }

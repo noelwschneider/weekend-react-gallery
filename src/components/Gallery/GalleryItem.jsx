@@ -8,17 +8,14 @@ function GalleryItem(pic) {
     }
     
     function likeImage() {
-        console.log(pic)
 
         axios.put(`/gallery/like/${pic.id}`, pic)
         .then( response => {
-            console.log('response:', response)
+            pic.getGallery()
         })
         .catch( error => {
             console.log('error in put', error)
         })
-
-        // It is working, I just need to render it
     }
 
     return (<>
