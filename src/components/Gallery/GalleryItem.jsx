@@ -20,7 +20,7 @@ function GalleryItem(pic) {
 
     return (<>
         <div className="image-container">
-            <img width="100" height="100" onClick={showDescription} src="/images/goat_small.jpg"/>
+            <img width="400" height="200" onClick={showDescription} src={pic.path}/>
             <button onClick={likeImage}>Like</button>
             <p>{pic.likes} people liked this</p>
         </div>
