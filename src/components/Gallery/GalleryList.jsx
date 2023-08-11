@@ -17,8 +17,15 @@ function GalleryList() {
         })
     }, [])
 
+    console.log(gallery)
+    gallery.map( pic => {
+        console.log(pic.description)
+    })
+
     return (<>
-        <GalleryItem />
+        {gallery.map( pic => (
+            <GalleryItem key={pic.id} id={pic.id} path={pic.path} description={pic.description} likes={pic.likes} setGallery={setGallery}/>
+        ))}
     </>)
 }
 
