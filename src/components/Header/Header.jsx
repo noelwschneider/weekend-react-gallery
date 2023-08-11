@@ -1,3 +1,5 @@
+import { Typography } from "@mui/material"
+
 function Header() {
     return(<>
         <header className="App-header">
