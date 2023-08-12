@@ -3,7 +3,7 @@
         {
             "language": "markdown",
             "source": [
-                "# To Do\n\n[] Update ReadMe\n\nImprove description styling\n\nFix up header appearance (bottom margin/padding)\n\nGet better-looking images\n\nAdd a menu to redirect to other pages\n    [] About page\n    [] Genre galleries\n    [] Special posters\n\nUtilize a database"
+                "# To Do\n\n[] Update ReadMe\n\nImprove description styling\n\nFix up header appearance (bottom margin/padding)\n\nGet better-looking images\n\nAdd a menu to redirect to other pages\n    [] About page\n    [] Genre galleries\n    [] Special posters\n\nUtilize a database\nAdjust GET so database only sorts by likes on initial render, then keeps the original order"
             ],
             "outputs": []
         },

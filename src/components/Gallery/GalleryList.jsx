@@ -9,34 +9,16 @@ function GalleryList() {
 
     const [gallery, setGallery] = useState([])
 
-    // // Working get using server data
-    // const getGallery = () => {
-    //     axios.get('/gallery')
-    //     .then( response => {
-    //         setGallery(response.data)
-    //     })
-    //     .catch( error => {
-    //         console.log('error in GET', error)
-    //     })
-    // }
-
-
-
-    // Attempt to GET from database
+    // GET Route
     const getGallery = () => {
-
         axios.get('/gallery')
         .then( response => {
-            console.log(response.data)
             setGallery(response.data)
-            console.log(gallery)
         })
         .catch( error => {
             console.log('error in GET', error)
         })
     }
-
-
 
     useEffect( () => {
         getGallery()
