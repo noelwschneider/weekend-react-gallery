@@ -143,7 +143,7 @@ const galleryItems = [
     { 
         id: 31, 
         path: 'images/chappie.jpeg', 
-        description: 'So often in life, the answer to "is it Chappie?" is a firm "no", and so this sudden "yes!" from vineyville provides a much-needed breath of fresh air.', 
+        description: 'So often in life, the answer to "is it Chappie?" is a firm "no". This sudden "yes!" from vineyville proves a much-needed breath of fresh air.', 
         likes: 0, 
         descMode: false
     },
