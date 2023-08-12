@@ -4,7 +4,6 @@ const galleryItems = [
         path: 'images/balloon.png', 
         description: 'On its own, this tweet may not hold the significance of other entries in this gallery. However, it is perhaps the best-known tweet from Stefan Heck, who has posted with remarkably consistent quality for over a decade. Many are the posters who shine brightly for a moment -- few are those who have stared into the void without it staring back.', 
         likes: 0, 
-        descMode: false
     },
 
     { 
@@ -12,7 +11,7 @@ const galleryItems = [
         path: 'images/bassoon.png', 
         description: 'A hallmark tweet of the "weird twitter" era, this entry from Pat Tobin encapsulates the lighthearted absurdity that ruled the day.', 
         likes: 0, 
-        descMode: false},
+    },
 
     { 
         id: 4, 
