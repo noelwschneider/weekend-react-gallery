@@ -2,7 +2,7 @@ const galleryItems = [
     { 
         id: 1, 
         path: 'images/balloon.png', 
-        description: 'On its own, this tweet may note hold the significance of other entries in this gallery. However, it is perhaps the best-known tweet from Stefan Heck, who has posted with remarkably consistent quality for over a decade. Many are the posters who shine brightly for a moment -- few are those who have stared into the void without it staring back.', 
+        description: 'On its own, this tweet may not hold the significance of other entries in this gallery. However, it is perhaps the best-known tweet from Stefan Heck, who has posted with remarkably consistent quality for over a decade. Many are the posters who shine brightly for a moment -- few are those who have stared into the void without it staring back.', 
         likes: 0, 
         descMode: false
     },
