@@ -25,11 +25,11 @@ function GalleryList() {
     }, [])
 
     gallery.map( pic => {
-        console.log(pic.description)
+        // console.log(pic.description)
     })
 
     return (<>
-        <ImageList className="image-list" variant="masonry" gap="0">
+        <ImageList className="image-list" variant="masonry" gap={0}>
             {gallery.map( pic => (
                 <GalleryItem 
                     key={pic.id} 

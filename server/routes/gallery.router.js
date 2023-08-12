@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     
     pool.query(queryText)
     .then( result => {
-        console.log(result.rows)
+        // console.log(result.rows)
         res.send(result.rows)
     })
     .catch( error => {
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
-    console.log('req.params', req.params);
+    // console.log('req.params', req.params);
 
     const queryValues = req.params.id
     const queryText = `
@@ -35,7 +35,7 @@ router.put('/like/:id', (req, res) => {
     
    pool.query(queryText, [queryValues])
    .then( response => {
-        console.log(response)
+        // console.log(response)
         res.sendStatus(200)
    })
    .catch( error => {
