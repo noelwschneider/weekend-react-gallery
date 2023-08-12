@@ -1,31 +1,4 @@
 const galleryItems = [
-    { 
-        id: 1, 
-        path: 'images/balloon.png', 
-        description: 'On its own, this tweet may not hold the significance of other entries in this gallery. However, it is perhaps the best-known tweet from Stefan Heck, who has posted with remarkably consistent quality for over a decade. Many are the posters who shine brightly for a moment -- few are those who have stared into the void without it staring back.', 
-        likes: 0, 
-    },
-
-    { 
-        id: 2, 
-        path: 'images/bassoon.png', 
-        description: 'A hallmark tweet of the "weird twitter" era, this entry from Pat Tobin encapsulates the lighthearted absurdity that ruled the day.', 
-        likes: 0, 
-    },
-
-    { 
-        id: 4, 
-        path: 'images/boggs.jpeg', 
-        description: 'Replies naturally struggle to take on the significance of standalone tweets -- they are punchlines to setups which the author must stumble upon. The best replies pull out a rug that will not be there long -- this from the virtually unknown crashx55 (barely 100 followers) does so with wonderful brevity.', 
-        likes: 0, 
-        descMode: false},
-
-    { 
-        id: 5, 
-        path: 'images/bowsuh.png', 
-        description: 'In the dialogue-heavy ironyscape of Twitter comedy, there is a premium on voices which are at once verisimilitudinous and absurd. Brooks Otterlake has found himself peerless in the ability to craft such voices.', 
-        likes: 0, 
-        descMode: false},
 
     { 
         id: 6, 

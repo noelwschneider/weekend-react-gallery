@@ -21,3 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
+
+# development
+notes.nnb
+gallery.previousrouter.js
+gallery.data.js
