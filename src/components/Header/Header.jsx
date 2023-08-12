@@ -1,10 +1,8 @@
-import { Typography } from "@mui/material"
-
 function Header() {
     return(<>
         <header className="App-header">
             <h1 className="App-title">Too Online</h1>
-            <h2>A Gallery</h2>
+            <h2 className="App-subtitle">A Gallery</h2>
         </header>
     </>)
 }

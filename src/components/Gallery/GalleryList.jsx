@@ -2,6 +2,8 @@ import GalleryItem from "./GalleryItem"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import { ImageList } from "@mui/material"
+
 
 function GalleryList() {
 
@@ -26,9 +28,18 @@ function GalleryList() {
     })
 
     return (<>
-        {gallery.map( pic => (
-            <GalleryItem key={pic.id} id={pic.id} path={pic.path} description={pic.description} likes={pic.likes} getGallery={getGallery} descMode={pic.descMode}/>
-        ))}
+        <ImageList className="image-list" variant="masonry" gap="0">
+            {gallery.map( pic => (
+                <GalleryItem 
+                    key={pic.id} 
+                    id={pic.id} 
+                    path={pic.path} 
+                    description={pic.description} 
+                    likes={pic.likes} 
+                    getGallery={getGallery} 
+                    descMode={pic.descMode}/>
+            ))}
+        </ImageList>
     </>)
 }
 

@@ -1,18 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
-
 .App-header {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 10vh;
   background-color: #222;
-  padding: 1em;
+  padding: 1.5vh;
   color: white;
-  margin-bottom: 1em;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
 }
 
 .App-title {
+  font-size: 3em;
+}
+
+.App-subtitle {
   font-size: 1.5em;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-  background-color: gray;
+  background-color: aqua;
+}
+
+.image-list {
+  position: relative;
+  top: 13vh;
+}
+
+.blue-container {
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.description {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: black;
+  font-size: 3vh;
+  margin: 0;
+  padding: 1vw;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: bold;
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* This style is applied to the entire ImageListItem when a description is being displayed. */
+img.descMode {
+  filter: blur(2px);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+
+
+
+
+.like-button {
+  width: 100%;
 }

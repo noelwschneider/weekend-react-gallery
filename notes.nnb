@@ -3,7 +3,7 @@
         {
             "language": "markdown",
             "source": [
-                "# To Do\n\n[] Update ReadMe\n\n[] CRUD\n    [] Get\n    [] Post?\n    [] Put (like button)\n    [] Delete?"
+                "# To Do\n\n[] Update ReadMe\n\nImprove description styling\n\nFix up header appearance (bottom margin/padding)\n\nGet better-looking images\n\nAdd a menu to redirect to other pages\n    [] About page\n    [] Genre galleries\n    [] Special posters\n\nUtilize a database"
             ],
             "outputs": []
         },
@@ -52,7 +52,7 @@
         {
             "language": "markdown",
             "source": [
-                "### Ideas for images\nI'm thinking it would be nice to make a little gallery for Patty. She is sacrificing too, and I think she would appreciate a little gesture. (Then again, the fact that instructors and stuff would see it might bug her. Might make an alt version for her.)\n\n- Costa Rica plane picture\n- Slamburger Patty logo\n- A picture from her Tinder\n- That hiking picture from her phone"
+                ""
             ],
             "outputs": []
         }
