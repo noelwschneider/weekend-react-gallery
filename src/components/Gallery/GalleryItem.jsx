@@ -1,10 +1,16 @@
 import axios from 'axios'
 import { useState } from 'react'
 
+
+
 // Styling
-import { Button, Typography } from '@mui/material'
+import { Button } from '@mui/material'
+import {ImageListItem} from '@mui/material'
+import {Container, Grid} from '@mui/material'
 
 function GalleryItem(pic) {
+
+    let charCount = pic.description.length
 
     // NOTE TO SELF: REVIEW WHY THIS WORKS
         // IT DONT MAKE NO SENSE TO ME
@@ -28,11 +34,16 @@ function GalleryItem(pic) {
     return (<>
         <div className="image-container">
             {descMode
-                ? <p onClick={showDescription}>{pic.description}</p>
-                : <img width="400" height="200" onClick={showDescription} src={pic.path}/>
+              ? <ImageListItem key={pic.id} onClick={showDescription}>
+                    <p className="description">{pic.description}</p>
+                    <img className="descMode" width="400" height="200"  src={pic.path}/>
+                    <Button variant="contained" onClick={likeImage}>Like ({pic.likes})</Button>
+                </ImageListItem>   
+              : <ImageListItem key={pic.id}>
+                    <img width="400" height="200" onClick={showDescription} src={pic.path}/>
+                    <Button variant="contained" onClick={likeImage}>Like ({pic.likes})</Button>
+                </ImageListItem>
             }
-            <Button variant="contained" onClick={likeImage}>Like</Button>
-            <p>{pic.likes} people liked this</p>
         </div>
     </>)
 }

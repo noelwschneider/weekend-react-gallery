@@ -16,3 +16,19 @@
 body {
   background-color: gray;
 }
+
+img.descMode {
+  filter: invert(1);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+.description {
+  font-size: 3vh;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: bold;
+  position: absolute;
+}
