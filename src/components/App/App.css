@@ -8,7 +8,7 @@
 }
 .App-header {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  height: 10vh;
+  height: 12vh;
   background-color: #222;
   padding: 1.5vh;
   color: white;
@@ -19,11 +19,11 @@
 }
 
 .App-title {
-  font-size: 3em;
+  font-size: 6vh;
 }
 
 .App-subtitle {
-  font-size: 1.5em;
+  font-size: 3vh;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .image-list {
   position: relative;
-  top: 13vh;
+  top: 15vh;
 }
 
 .blue-container {
@@ -65,9 +65,13 @@ img.descMode {
 }
 
 
+.image-container {
+  border: 0.5px solid black;
+}
 
 
-
-.like-button {
-  width: 100%;
+.MuiButton-root.like-button {
+  border-radius: 0%;
+    width: 100%;
+  border-radius: 0px;
 }
