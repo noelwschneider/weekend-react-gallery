@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const galleryItems = require('../modules/gallery.data');
 const pool = require('../modules/pool')
 
 
@@ -21,6 +20,7 @@ router.get('/', (req, res) => {
         res.sendStatus(500)
     })
 })
+
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
