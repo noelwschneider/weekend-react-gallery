@@ -1,8 +1,8 @@
 function Header() {
     return(<>
         <header className="App-header">
-            <h1 className="App-title">Too Online</h1>
-            <h2 className="App-subtitle">A Gallery</h2>
+            <h1 className="App-title">TOO ONLINE</h1>
+            <h2 className="App-subtitle">a gallery of tweets that have stuck with me</h2>
         </header>
     </>)
 }
