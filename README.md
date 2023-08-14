@@ -34,7 +34,7 @@ This section is for development purposes and is not likely of much interest to o
 While I am happy with the state of my project, there is always room for improvement. These are tasks I can tackle when the time comes to build upon this weekend's work.
 
 ### Features
-This app would benefit from filters. Users could find tweets more easily if they could filter by other name, likes, tags, or even tweets contents. It would also be easier to navigate if the user could sort tweets by likes or author.
+This app would benefit from filters. Users could find tweets more easily if they could filter by author name, likes, tags, or even tweets contents. It would also be easier to navigate if the user could sort tweets by likes or author.
 
 It would be nice to let the user decide how many columns should be displayed.
 
@@ -60,6 +60,6 @@ The nested ternary operators in the list item component are not the easiest to p
 
 JSX elements with multiple properties and children become pretty difficult to display legibly. I should review best practices for this in case there is a more elegant approach than how my code is currently presented.
 
-I currently tint the image blue with two separate listener functions on the like button: onMouseEnter to turn it blue, and onMouseLeave to remove the blue tint. I suspect it would be more elegant to use onHover and a function to toggle the tint, but I got it working as is and I don't see a functional downside as it is. 
+I currently tint the image blue with two separate listener functions on the like button: onMouseEnter to turn it blue, and onMouseLeave to remove the blue tint. I suspect it would be more elegant to use onHover and a function to toggle the tint, but I got it working as is and I don't see a functional downside to the current approach. No less, this is a change to consider if I am feeling idealistic.
 
-Right now, I suspect my JSON file has users downloading quite a bit more of the Material UI package than is really needed. I should see if this is the case, and whether I can cut the fat from this dependency by only installing the MUI components that are actually used in the project.
+Right now, I suspect my JSON file has users installing quite a bit more of the Material UI package than is really needed. I should see if this is the case, and whether I can cut the fat from this dependency by only installing the MUI components that are actually used in the project.
