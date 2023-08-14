@@ -11,8 +11,6 @@ Each image includes a like button. The tweet's like count is displayed in parent
 <img src="weekend_gallery_example.gif">
 
 <br/>
-There are no options to add or delete tweets. While this functionality would be straightforward to implement, it would not fit with the theme of the gallery (a collection of tweets that I find personally memorable). I figure I will get plenty of practice implementing add/delete features, but might as well reinforce the philosophy of developing features around the desired app rather than developing the app around desired features.
-
 
 ## Technology
 This project is written in Javascript. It uses React, Axios, Postgres, Express, and Material UI.
