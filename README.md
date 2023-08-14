@@ -3,7 +3,7 @@ Though I don't spend much time on Twitter these days, the site will always have 
 
 
 ## Presentation and Functionality
-Tweets are displayed in an image list. Clicking on am image will display a description of why the tweet has stuck with me -- clicking again will hide the description. 
+Tweets are displayed in an image list. Clicking on an image will display a description of why the tweet has stuck with me -- clicking again will hide the description. 
 
 Each image includes a like button. The tweet's like count is displayed in parentheses on the button. Hovering over the like button will add a blue tint to its corresponding tweet, and clicking it will increase the like count for the tweet (only in the gallery -- the actual tweet will be unaffected).
 <br/>
