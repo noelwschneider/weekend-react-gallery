@@ -11,7 +11,7 @@ Each image includes a like button. The tweet's like count is displayed in parent
 <img src="weekend_gallery_example.gif">
 
 <br/>
-There are no options to add or delete tweets. While this functionality would be straightforward to implement, it would not fit with the theme of the gallery (a collection of tweets that I find personally memorable). I figure I will get plenty of practice implementing add/delete features, but might as well reinforce the philosophy of developing features around the project rather than developing a project around desired features.
+There are no options to add or delete tweets. While this functionality would be straightforward to implement, it would not fit with the theme of the gallery (a collection of tweets that I find personally memorable). I figure I will get plenty of practice implementing add/delete features, but might as well reinforce the philosophy of developing features around the desired app rather than developing the app around desired features.
 
 
 ## Technology
@@ -31,7 +31,7 @@ The app should now be running on localhost:3000.
 
 
 ## Refactoring Goals
-This section is for development purposes and is not likely of much interest to outside parties, but I've included it regardless. If you have made it to this point in the document, you read farther than I thought you would. Please only continue on if it satisfies your own interests.
+This section is for development purposes and is not likely of much interest to outside parties, but I've included it regardless. Please only continue on if it satisfies your own interests.
 
 While I am happy with the state of my project, there is always room for improvement. These are tasks I can tackle when the time comes to build upon this weekend's work.
 
