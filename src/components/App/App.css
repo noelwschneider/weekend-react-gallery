@@ -3,75 +3,94 @@
   padding: 0;
 }
 
-.App {
-  text-align: center;
-}
-.App-header {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  height: 12vh;
-  background-color: #222;
-  padding: 1.5vh;
-  color: white;
-  position: fixed;
-  top: 0;
-  z-index: 3;
-  width: 100vw;
+body {
+  /* This is what shows up in white space, and also what tints the images in the description and like button event listeners */
+  background-color: aqua;
 }
 
+/* HEADER STYLING */
+/* Container */
+.App-header {
+  /* Text */
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center; 
+  
+  /* Size and Position*/
+  position: fixed;
+  height: 12vh;
+  width: 100vw;
+  padding: 1.5vh;
+  top: 0;
+  z-index: 3;
+
+  /* Color */
+  background-color: #222;
+  color: white;
+}
+
+/* Main title */
 .App-title {
   font-size: 6vh;
 }
 
+/* Subtitle */
 .App-subtitle {
   font-size: 3vh;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-  background-color: aqua;
-}
 
+/* IMAGE STYLING */
+/* Image list container */
 .image-list {
   position: relative;
   top: 15vh;
 }
 
-.blue-container {
-  margin: 0;
-  padding: 0;
-  opacity: 0.5;
-  z-index: 1;
-}
-
-.description {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: black;
-  font-size: 3vh;
-  margin: 0;
-  padding: 1vw;
-  text-align: justify;
-  text-justify: inter-word;
-  font-weight: bold;
-  position: absolute;
-  opacity: 1;
-  z-index: 1;
-}
-
-/* This style is applied to the entire ImageListItem when a description is being displayed. */
-img.descMode {
-  filter: blur(2px);
-  opacity: 0.35;
-  z-index: -1;
-}
-
-
+/* Image list item container */
 .image-container {
   border: 0.5px solid black;
 }
 
+/* Image when like button is hovered over */
+.blue-container {
+  /* Position */
+  margin: 0;
+  padding: 0;
+  z-index: 1;
 
+  /* Filter */
+  opacity: 0.5; /* This allows the aqua background to seep in, tinting the image blue */
+}
+
+/* Image container when the description is being displayed */
+img.descMode {
+  z-index: 0;
+
+  /* Filter */
+  filter: blur(2px); /* Image is blurred so image text does not obscure description text */
+  opacity: 0.5; /* Opacity is lowered for blue tint */
+}
+
+/* The actual text that appears when image description is displayed */
+.description {
+  /* Text */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3vh;
+  color: black;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: bold;
+
+  /* Size and position */
+  margin: 0;
+  padding: 1vw;
+  position: absolute;
+  z-index: 1; /* The text needs to appear above the container, or else it will appear faint because of the lowered opacity*/
+}
+
+/* Like button */
 .MuiButton-root.like-button {
-  border-radius: 0%;
   width: 100%;
   border-radius: 0px;
   z-index: 2;

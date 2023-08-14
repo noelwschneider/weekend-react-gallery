@@ -1,4 +1,4 @@
-# Too Online: A Gallery of Tweets that have Stuck with Me
+# Very Online: A Gallery of Tweets that have Stuck with Me
 Though I don't spend much time on Twitter these days, the site will always have a special place in my heart. A handful of tweets have stuck with me over the years, so I have displayed them in this gallery for my weekend assignment.
 
 
@@ -6,38 +6,62 @@ Though I don't spend much time on Twitter these days, the site will always have 
 Tweets are displayed in an image list. Clicking on am image will display a description of why the tweet has stuck with me -- clicking again will hide the description. 
 
 Each image includes a like button. The tweet's like count is displayed in parentheses on the button. Hovering over the like button will add a blue tint to its corresponding tweet, and clicking it will increase the like count for the tweet (only in the gallery -- the actual tweet will be unaffected).
+<br/>
 
-There are no options to add or delete tweets. While this functionality would be straightforward to implement, it would not fit with the theme of the gallery (a collection of tweets that have stuck with me). I figure I will get plenty of practice implementing add/delete features, but might as well reinforce the philosophy of developing features around the project rather than developing a project around desired features.
+<img src="weekend_gallery_example.gif">
+
+<br/>
+There are no options to add or delete tweets. While this functionality would be straightforward to implement, it would not fit with the theme of the gallery (a collection of tweets that I find personally memorable). I figure I will get plenty of practice implementing add/delete features, but might as well reinforce the philosophy of developing features around the project rather than developing a project around desired features.
 
 
 ## Technology
-This gallery relies heavily on React. The image list which makes up the bulk of the page is built in a React component which gets the array of image objects from the database (via an Axios GET request to the router) and maps through the array (utilizing a function imported from another component) to achieve the desired DOM representation for each image.
-
-Image object properties or "propped" into the list-item rendering function. Conditional rendering is utilized to change the presentation of each image when it is clicked (display description) or when the like button is hovered over (tint the image blue). Two ternary operators are chained together to achieve the proper priority for this conditional rendering.
-
-The Axios GET request is triggered initially when the page renders, and at the end of all listener functions. The client GET code is written in the image list component. The server code is included in the gallery router, and sends a Postgres query to the database (stored in the pool module). 
-
-The like button utilizes an Axios PUT request. The client-side code is written in the list item component. It specifies an image ID to the router (through a property of the image object) and sends a query to the database to increment the "likes" value in the selected row. Assuming a successful query, a GET request is made.
-
-Material UI is used for the majority of styling, though some plain CSS is included for touch ups.
+This project is written in Javascript. It uses React, Axios, Postgres, Express, and Material UI.
 
 
-## Refactoring
-While I am happy with the state of my project, there is always room for improvement. These are some tasks I can tackle when the time comes to build upon this weekend's work.
+## How to Use
+1. Clone the project repo and open it in VS Code.
+2. Run `npm install` to install the required packages from node_modules.
+3. Create a Postgres database called "weekend_gallery".
+4. Copy the query text in database.sql and paste it into a query in the "weekend_gallery" database.
+5. Execute the query to create the "pics" table, then the command to populate it.
+6. Open split terminals in VS Code. In the first terminal, run the command `npm run server`.
+7. In the second terminal, run the command `npm run client`. 
+
+The app should now be running on localhost:3000.
+
+
+## Refactoring Goals
+This section is for development purposes and is not likely of much interest to outside parties, but I've included it regardless. If you have made it to this point in the document, you read farther than I thought you would. Please only continue on if it satisfies your own interests.
+
+While I am happy with the state of my project, there is always room for improvement. These are tasks I can tackle when the time comes to build upon this weekend's work.
 
 ### Features
 This app would benefit from filters. Users could find tweets more easily if they could filter by other name, likes, tags, or even tweets contents. It would also be easier to navigate if the user could sort tweets by likes or author.
 
 It would be nice to let the user decide how many columns should be displayed.
 
-### Design
+### Style
 It would be preferable that images flow from left-to-right, rather than top-to-bottom.
 
 In certain circumstances, the like button for the bottom image of the left column appears at the beginning of the right column. 
 
 The page responds reasonably well to changes in the window size, but some tweaking could be done to refine the app in this regard.
 
-There is generally a bit of white (actually baby blue) space at the bottom of the page because the columns are not the same length. It would be ideal if columns were always the same height on the page.
+There is generally a bit of white (actually aqua) space at the bottom of the page because the columns are not the same length. It would be ideal if columns were always the same height on the page.
 
-### Readability
+I think it would be more intuitive for tweet descriptions to display via a click listener on an icon button rather than the image itself. The icon button could share a row with the like button or overlay somewhere on the right side of the image.
+
+The current technique for tinting images blue (making the image translucent to let the blue background bleed through) came about as a happy accident when I was trying to lay a translucent blue div over each image. The current technique works, but it would probably be a bit more controlled to make the original plan work.
+    I could also probably continue to tint by making the image translucent, but give the container a background color rather than using the background color of the entire page body. I should look into conventions for this sort of styling.
+
+
+### Readability & Efficiency
+I need to add alt text to the images. I realized this omission too late in the weekend to write alt text for each tweet, add it to the database query text, and add the necessary client and server code to incorporate it in the rendered image, but this will be the first update I make when I begin refactoring this project.
+
 The nested ternary operators in the list item component are not the easiest to peruse in their current state. Handling some (or most, or all) of the logic outside of the return statement would probably improve legibility.
+
+JSX elements with multiple properties and children become pretty difficult to display legibly. I should review best practices for this in case there is a more elegant approach than how my code is currently presented.
+
+I currently tint the image blue with two separate listener functions on the like button: onMouseEnter to turn it blue, and onMouseLeave to remove the blue tint. I suspect it would be more elegant to use onHover and a function to toggle the tint, but I got it working as is and I don't see a functional downside as it is. 
+
+Right now, I suspect my JSON file has users downloading quite a bit more of the Material UI package than is really needed. I should see if this is the case, and whether I can cut the fat from this dependency by only installing the MUI components that are actually used in the project.
