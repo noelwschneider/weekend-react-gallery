@@ -1,12 +1,16 @@
-import GalleryItem from "./GalleryItem"
+// Dependencies(?)
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+// Styling
 import { ImageList } from "@mui/material"
 
+// Components
+import GalleryItem from "./GalleryItem"
 
+// Export function
 function GalleryList() {
-
+    // Array to hold picture objects
     const [gallery, setGallery] = useState([])
 
     // GET Route
@@ -20,14 +24,12 @@ function GalleryList() {
         })
     }
 
+    // Rendering image list at initial page load
     useEffect( () => {
         getGallery()
     }, [])
 
-    gallery.map( pic => {
-        // console.log(pic.description)
-    })
-
+    // Return image list with a list item for each tweet in the database
     return (<>
         <ImageList className="image-list" variant="masonry" gap={0}>
             {gallery.map( pic => (

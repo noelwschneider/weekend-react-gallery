@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
-
 // GET Route
 router.get('/', (req, res) => {
     const queryText = `
@@ -24,7 +23,6 @@ router.get('/', (req, res) => {
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
-    // console.log('req.params', req.params);
 
     const queryValues = req.params.id
     const queryText = `
@@ -35,7 +33,6 @@ router.put('/like/:id', (req, res) => {
     
    pool.query(queryText, [queryValues])
    .then( response => {
-        // console.log(response)
         res.sendStatus(200)
    })
    .catch( error => {

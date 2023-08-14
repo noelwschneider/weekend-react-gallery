@@ -15,13 +15,7 @@ There are no options to add or delete tweets. While this functionality would be 
 
 
 ## Technology
-The data for each image is contained in an object, and all of the objects are stored in an array in the GalleryList component. This data arrives in the component via an Axios GET route which makes a database query. 
-
-The array is mapped so each object is propped into the GalleryItem component, which returns JSX to GalleryList using the image data. The returned JSX uses conditional rendering to modify the DOM when an event listener is triggered.
-
-The like button utilizes an Axios PUT route.
-
-Material UI is used for the majority of styling, though some plain CSS is included for touch ups.
+This project is written in Javascript. It uses React, Axios, Postgres, Express, and Material UI.
 
 
 ## How to Use
@@ -37,6 +31,8 @@ The app should now be running on localhost:3000.
 
 
 ## Refactoring Goals
+This section is for development purposes and is not likely of much interest to outside parties, but I've included it regardless. If you have made it to this point in the document, you read farther than I thought you would. Please only continue on if it satisfies your own interests.
+
 While I am happy with the state of my project, there is always room for improvement. These are tasks I can tackle when the time comes to build upon this weekend's work.
 
 ### Features
@@ -55,10 +51,17 @@ There is generally a bit of white (actually aqua) space at the bottom of the pag
 
 I think it would be more intuitive for tweet descriptions to display via a click listener on an icon button rather than the image itself. The icon button could share a row with the like button or overlay somewhere on the right side of the image.
 
+The current technique for tinting images blue (making the image translucent to let the blue background bleed through) came about as a happy accident when I was trying to lay a translucent blue div over each image. The current technique works, but it would probably be a bit more controlled to make the original plan work.
+    I could also probably continue to tint by making the image translucent, but give the container a background color rather than using the background color of the entire page body. I should look into conventions for this sort of styling.
+
 
 ### Readability & Efficiency
 I need to add alt text to the images. I realized this omission too late in the weekend to write alt text for each tweet, add it to the database query text, and add the necessary client and server code to incorporate it in the rendered image, but this will be the first update I make when I begin refactoring this project.
 
 The nested ternary operators in the list item component are not the easiest to peruse in their current state. Handling some (or most, or all) of the logic outside of the return statement would probably improve legibility.
+
+JSX elements with multiple properties and children become pretty difficult to display legibly. I should review best practices for this in case there is a more elegant approach than how my code is currently presented.
+
+I currently tint the image blue with two separate listener functions on the like button: onMouseEnter to turn it blue, and onMouseLeave to remove the blue tint. I suspect it would be more elegant to use onHover and a function to toggle the tint, but I got it working as is and I don't see a functional downside as it is. 
 
 Right now, I suspect my JSON file has users downloading quite a bit more of the Material UI package than is really needed. I should see if this is the case, and whether I can cut the fat from this dependency by only installing the MUI components that are actually used in the project.
