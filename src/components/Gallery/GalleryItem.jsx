@@ -34,14 +34,24 @@ function GalleryItem(pic) {
         <div className="image-container">
             {descMode
 
-              ? <ImageListItem key={pic.id} onClick={showDescription}>
-                    <p className="description">{pic.description}</p>
-                    <img className="descMode" width="400" height="200"  src={pic.path}/>
+              ? <ImageListItem 
+                    key={pic.id} 
+                    onClick={showDescription}>
+
+                    <p className="description">
+                        {pic.description}
+                    </p>
+
+                    <img 
+                        className="descMode" 
+                        width="400" 
+                        height="200" 
+                        src={pic.path}/>
+
                     <Button 
                         className="like-button"
                         variant="contained" 
-                        disabled
-                        >
+                       >
                         Like ({pic.likes})
                     </Button>
                 </ImageListItem>   
